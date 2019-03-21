@@ -1,0 +1,88 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>net.mekomsolutions</groupId>
+  <artifactId>bahmni-distro-chida</artifactId>
+  <name>CHIDA distribution</name>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <developers>
+    <developer>
+      <name>Mekom Solutions</name>
+    </developer>
+  </developers>
+  <organization>
+    <name>Mekom Solutions</name>
+    <url>http://www.mekomsolutions.com</url>
+  </organization>
+
+  <parent>
+    <groupId>net.mekomsolutions</groupId>
+    <artifactId>bahmni-distro-haiti</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+
+    <!-- Configs -->
+    <!-- <child.openmrsconfigVersion>1.0.0-SNAPSHOT</child.openmrsconfigVersion> -->
+    <child.bahmniconfigVersion>1.0.0-SNAPSHOT</child.bahmniconfigVersion>
+
+  </properties>
+
+  <dependencies>
+    <!-- <dependency>
+      <groupId>net.mekomsolutions</groupId>
+      <artifactId>openmrs-config-chida</artifactId>
+      <type>zip</type>
+      <version>${child.openmrsconfigVersion}</version>
+    </dependency> -->
+    <dependency>
+      <groupId>net.mekomsolutions</groupId>
+      <artifactId>bahmni-config-chida</artifactId>
+      <type>zip</type>
+      <version>${child.bahmniconfigVersion}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.8</version>
+        <!-- OpenMRS child config -->
+        <executions>
+          <execution>
+            <id>unpack-openmrs-config</id>
+            <phase>package</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${distro.openmrsconfigDir}</outputDirectory>
+              <includeArtifactIds>openmrs-config-chida</includeArtifactIds>
+            </configuration>
+          </execution>
+        <!-- Bahmni child config -->
+          <execution>
+            <id>unpack-bahmni-config</id>
+            <phase>package</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <excludeTransitive>true</excludeTransitive>
+              <useBaseVersion>true</useBaseVersion>
+              <outputDirectory>${distro.bahmniconfigDir}</outputDirectory>
+              <includeArtifactIds>bahmni-config-chida</includeArtifactIds>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
