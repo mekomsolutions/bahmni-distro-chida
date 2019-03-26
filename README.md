@@ -21,10 +21,10 @@ mvn clean package
 * `bahmni_emr/`
 <br/>The target version of the front-end apps that makes 'Bahmni EMR'.
 * `bahmni_config/`
-<br/>The bespoke Bahmni configuration (more [here](https://github.com/CRUDEM/bahmni-config-hsc)) to be consumed by Bahmni Apps.
+<br/>The bespoke Bahmni configuration (more [here](https://github.com/mekomsolutions/bahmni-config-chida)) to be consumed by Bahmni Apps.
 * `openmrs_modules/`
 <br/>The required set of OpenMRS modules.
 * `openmrs_config/`
-<br/>The OpenMRS bespoke configuration (more [here](https://github.com/CRUDEM/openmrs-config-hsc)) to be processed by the [Initializer module](https://github.com/mekomsolutions/openmrs-module-initializer).
+<br/>The OpenMRS bespoke configuration (more [here](https://github.com/mekomsolutions/openmrs-config-chida)) to be processed by the [Initializer module](https://github.com/mekomsolutions/openmrs-module-initializer).
 * `openmrs_core/`
 The target version of OpenMRS Core.
