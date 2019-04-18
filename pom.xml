@@ -25,18 +25,18 @@
   <properties>
 
     <!-- Configs -->
-    <!-- <child.openmrsconfigVersion>1.0.0-SNAPSHOT</child.openmrsconfigVersion> -->
+    <child.openmrsconfigVersion>1.0.0-SNAPSHOT</child.openmrsconfigVersion>
     <child.bahmniconfigVersion>1.0.0-SNAPSHOT</child.bahmniconfigVersion>
 
   </properties>
 
   <dependencies>
-    <!-- <dependency>
+    <dependency>
       <groupId>net.mekomsolutions</groupId>
       <artifactId>openmrs-config-chida</artifactId>
       <type>zip</type>
       <version>${child.openmrsconfigVersion}</version>
-    </dependency> -->
+    </dependency>
     <dependency>
       <groupId>net.mekomsolutions</groupId>
       <artifactId>bahmni-config-chida</artifactId>
